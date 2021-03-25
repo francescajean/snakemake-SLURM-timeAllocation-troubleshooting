@@ -1,7 +1,7 @@
 rule all:
     input:
         "test_60min",
-        "test_400min"
+        "test_420min"
 
 rule test_short_time:
     params:
@@ -20,11 +20,11 @@ rule test_long_time:
     params:
         test2="test2"
     output:
-        "test_400min"
+        "test_420min"
     resources:
         mem=1000,
-        time=24000
+        time=25200
     shell: """
-        sleep 12000
+        sleep 25200
         touch  {output}
         """
