@@ -23,7 +23,7 @@ rule test_long_time:
         "test_420min"
     resources:
         mem=1000,
-        time=25200
+        time=420
     shell: """
         sleep 25200
         touch  {output}
